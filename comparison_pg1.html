@@ -19,7 +19,7 @@
 <nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.html">LATITUDE</a>
+      <a class="navbar-brand" href="#">LATITUDE</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
        <li class="dropdown">
@@ -37,29 +37,34 @@
     </ul>
   </div>
 </nav>
-<div class=container-fluid>
-<div class="row">
-<div class="col-7 col-md-7">
-  <h1>Summary: Latitude vs X</h1>
-  <p>Click any plot on the right to get in-depth analysis</p>
-  <hr>
-  <img src="Fig1.png" width=45% class="responsive pull-left">
-  <p>The objective was to build a series of scatter plots to showcase the following relationships:
-<li>Max Temperature (F) vs. Latitude</li>
-<li>Humidity (%) vs. Latitude</li>
-<li>Cloudiness (%) vs. Latitude</li>
-<li>Wind Speed (mph) vs. Latitude</li>
-</p>
-  </div>
-  <div class="col-5 col-md-5">
-	<h3> Vizualizations </h3>
-	<a href="temperature.html"><img src="Fig1.png" width=45% class="responsive gap-right gap-below"></a>
-    <a href="humidity.html"><img src="Fig2.png" width=45% class="responsive gap-below"></a>
-    <a href="cloudiness.html"><img src="Fig3.png" width=45% class="responsive gap-right"></a>
-    <a href="windspeed.html"><img src="Fig4.png" width=45% class="responsive"></a>
-	
-	</div>
+
+
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+
+
+<h1>Comparison: Latitude vs X</h1>
+<p>Click any plot to get in-depth analysis</p>
+
+<div class="grid-container">
+  <div class="grid-item"><a href="temperature.html"><h3> vs. Temperature</h3><img src="Fig1.png"  width=60% class="responsive"></a></div>
+  <div class="grid-item"><a href="humidity.html"><h3>vs. Humidity</h3><img src="Fig2.png"  width=60% class="responsive"></a></div>
+  <div class="grid-item"><a href="cloudiness.html"><h3>vs. Cloudiness</h3><img src="Fig3.png"  width=60% class="responsive"></a></div>  
+  <div class="grid-item"><a href="windspeed.html"><h3>vs. Wind Speed</h3><img src="Fig4.png"  width=60% class="responsive"></a></div>
+  
 </div>
-</div>
+
 </body>
 </html>
