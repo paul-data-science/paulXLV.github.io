@@ -1,40 +1,59 @@
-<h1 id="hw5-pymaceuticals">HW5 - Pymaceuticals</h1>
-<h2 id="finished-scatter-plots-and-bar-chart">Finished Scatter Plots and Bar Chart</h2>
-<ul>
-<li><h2 id="scatter-plot-that-shows-how-the-tumor-volume-changes-over-time-for-each-treatment-">Scatter plot that shows how the tumor volume changes over time for each treatment:</h2>
-<p><img src="https://github.com/paulXLV/HW5/blob/master/Tumor_Response_to_Treatment.png?raw=true" alt="text"></p>
-</li>
-<li><h2 id="scatter-plot-that-shows-how-the-number-of-metastatic-cancer-spreading-sites-changes-over-time-for-each-treatment-">Scatter plot that shows how the number of metastatic (cancer spreading) sites changes over time for each treatment:</h2>
-<p><img src="https://github.com/paulXLV/HW5/blob/master/Metastatic_Spread_During_Treatment.png?raw=true" alt="text"></p>
-</li>
-<li><h2 id="scatter-plot-that-shows-the-number-of-mice-still-alive-through-the-course-of-treatment-survival-rate-">Scatter plot that shows the number of mice still alive through the course of treatment (Survival Rate)</h2>
-<p><img src="https://github.com/paulXLV/HW5/blob/master/Survival_During_Treatment.png?raw=true" alt="text"></p>
-</li>
-<li><h2 id="bar-graph-that-compares-the-total-tumor-volume-change-for-each-drug-across-the-full-45-days-">bar graph that compares the total % tumor volume change for each drug across the full 45 days:</h2>
-<p><img src="https://raw.githubusercontent.com/paulXLV/HW5/master/tumor_chg_over_45.png" alt="text"></p>
-</li>
-</ul>
-<p>While your data companions rushed off to jobs in finance and government, you remained adamant that science was the way for you. Staying true to your mission, you&#39;ve since joined Pymaceuticals Inc., a burgeoning pharmaceutical company based out of San Diego, CA. Pymaceuticals specializes in drug-based, anti-cancer pharmaceuticals. In their most recent efforts, they&#39;ve since begun screening for potential treatments to squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.</p>
-<p>As their Chief Data Analyst, you&#39;ve been given access to the complete data from their most recent animal study. In this study, 250 mice were treated through a variety of drug regimes over the course of 45 days. Their physiological responses were then monitored over the course of that time. Your objective is to analyze the data to show how four treatments (Capomulin, Infubinol, Ketapril, and Placebo) compare.</p>
-<p>To do this you are tasked with:</p>
-<ul>
-<li>Creating a scatter plot that shows how the tumor volume changes over time for each treatment.</li>
-<li>Creating a scatter plot that shows how the number of <a href="https://en.wikipedia.org/wiki/Metastasis">metastatic</a> (cancer spreading) sites changes over time for each treatment.</li>
-<li>Creating a scatter plot that shows the number of mice still alive through the course of treatment (Survival Rate)</li>
-<li>Creating a bar graph that compares the total % tumor volume change for each drug across the full 45 days.</li>
-</ul>
-<p>As final considerations:</p>
-<ul>
-<li>You must use the Pandas Library and the Jupyter Notebook.</li>
-<li>You must use the Matplotlib library.</li>
-<li>You must include a written description of three observable trends based on the data.</li>
-<li>You must use proper labeling of your plots, including aspects like: Plot Titles, Axes Labels, Legend Labels, X and Y Axis Limits, etc.</li>
-<li>Your scatter plots must include <a href="https://en.wikipedia.org/wiki/Error_bar">error bars</a>. This will allow the company to account for variability between mice. You may want to look into <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.sem.html"><code>pandas.DataFrame.sem</code></a> for ideas on how to calculate this.</li>
-<li>Remember when making your plots to consider aesthetics!<ul>
-<li>Your legends should not be overlaid on top of any data.</li>
-<li>Your bar graph should indicate tumor growth as red and tumor reduction as green.
-It should also include a label with the percentage change for each bar. You may want to consult this <a href="http://composition.al/blog/2015/11/29/a-better-way-to-add-labels-to-bar-charts-with-matplotlib/">tutorial</a> for relevant code snippets.</li>
-</ul>
-</li>
-<li>See <a href="Pymaceuticals/pymaceuticals_starter.ipynb">Starter Workbook</a> for a reference on expected format. (Note: For this example, you are not required to match the tables or data frames included. Your only goal is to build the scatter plots and bar graphs. Consider the tables to be potential clues, but feel free to approach this problem, however, you like.)</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Web Visualization Dashboard</title>
+
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<body>
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">LATITUDE</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+       <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">Plots
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="temperature.html">Temperature</a></li>
+          <li><a href="humidity.html">Humidity</a></li>
+          <li><a href="cloudiness.html">Cloudiness</a></li>
+		  <li><a href="windspeed.html">Wind Speed</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Comparison</a></li>
+      <li><a href="Data_pg1.html">Data</a></li>
+    </ul>
+  </div>
+</nav>
+<div class=container-fluid>
+<div class="row">
+<div class="cpl-7 col-md-7">
+  <h1>Comparison: Latitude vs X</h1>
+  <p>Click any plot to get in-depth analysis</p>
+  <hr>
+  <img src="Fig1.png" class="responsive">
+
+  </div>
+  <div class="col-5 col-md-5">
+ 
+	<img src="Fig1.png" width=45% class="responsive gap-right gap-below">
+    <img src="Fig2.png" width=45% class="responsive gap-below">
+    <img src="Fig3.png" width=45% class="responsive gap-right">
+    <img src="Fig4.png" width=45% class="responsive">
+	</div>
+</div>
+</div>
+</body>
+</html>
